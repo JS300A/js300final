@@ -1,6 +1,7 @@
 import React from "react";
 import Alert from "@material-ui/lab/Alert";
 import { FireBaseData } from './FireBase.js'
+require('dotenv').config();
 
 class Google extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class Google extends React.Component {
 
 
     fetch(
-      "https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyAkr3rKH2-xicIld4B6rHrt6RF9gnLctd0",
+      "https://safebrowsing.googleapis.com/v4/threatMatches:find?key=" + process.env.GOOGLEKEY,
       requestOptions
     )
       .then((res) => res.json())

@@ -1,4 +1,5 @@
 import React from "react";
+require('dotenv').config();
 
 class ThumbIO extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class ThumbIO extends React.Component {
   }
 
   render() {
-    let imgRender = 'https://image.thum.io/get/auth/9495-test/https://' + this.props.value
+    let imgRender = 'https://image.thum.io/get/auth/' + process.env.THUMBIOKEY + '/https://' + this.props.value
 
       return (
         <img src={imgRender} alt='thum.io'></img>

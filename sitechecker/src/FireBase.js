@@ -1,7 +1,8 @@
 import firebase from "firebase";
+require('dotenv').config();
 
 firebase.initializeApp({
-  apiKey: "AIzaSyDCeQIhbuvK-nWNhBZ_FwgrklePo2AbZA4",
+  apiKey: process.env.FIREBASEKEY,
   projectId: "rf-app-journal",
   databaseURL: "https://rf-app-journal.firebaseio.com",
 });
